@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Home Page</h1>
+    <h1>Enter The Details</h1>
+    <form action="{% url 'result' %}">
+        <fieldset></fieldset>
+
+
+        {% csrf_token %}
+        <p>
+        <label for="Pregnancies" >Pregnancies:</label>
+
+         <input type="text"  required name="Pregnancies" align="left" >
+        </p>
+        <p>
+            <label for="Glucose" >Glucose:</label>
+           <input type="text"  required name="Glucose"> 
+        </p>
+        <p>
+            <label for="BloodPressure" >BloodPressure:</label>
+        <input type="text"  required name="BloodPressure"> 
+        </p>
+        <p>
+            <label for="SkinThickness" >SkinThickness:</label>
+        <input type="text"  required name="SkinThickness">
+        </p>
+        <p>
+            <label for="Insulin" >Insulin:</label>
+        <input type="text"  required name="Insulin">
+        </p>
+        <p>
+            <label for="BMI" >BMI:</label>
+        <input type="text"  required name="BMI">
+        </p>
+        <p>
+            <label for="DiabetesPedigreeFunction" >DiabetespedegreeFN:</label>
+        <input type="text"  required name="DiabetesPedigreeFunction">
+        </p>
+        <p>
+            <label for="Age" >Age:</label>
+        <input type="text"  required name="Age"> 
+        </p>
+        
+    <p id="sub">
+    
+            <input type="submit" name="" value="submit" >
+      
+    </p>
+    
+        
+    </fieldset>
+    </form>
+
+    <style>
+        fieldset{
+            background-color:lightgreen;
+            border: none;
+            border-radius: 2px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            padding: 0 .625em;
+        }
+
+        label{
+            cursor: pointer;
+            display: inline-block;
+            padding: 3px 6px;
+            text-align: center;
+            width: 150px;
+            vertical-align: top;
+        }
+
+        input{
+            font-size: inherit;
+        }
+        #sub {
+  text-align: left;
+  }
+    </style>
+</body>
+</html>
